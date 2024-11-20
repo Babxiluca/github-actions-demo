@@ -4,10 +4,10 @@
 name: Java CI with Gradle
 
 on:
-  push:
-    branches: [ master ]
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
+  push:
+    branches: [ main ]
 
 jobs:
   build-java:
@@ -35,4 +35,3 @@ jobs:
         registry: docker.io
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
-         
